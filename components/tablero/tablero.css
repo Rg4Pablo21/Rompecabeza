@@ -1,3 +1,24 @@
 .tablero{
-    background-color: blue
+    background-color: blue;
+}
+
+.div-tablero{
+    background-color: aqua;
+
+    display: grid;
+    grid-template-columns: repeat(8,8rem);
+    grid-template-rows: repeat(8,8rem);
+    gap: 1rem;
+    padding: 10rem;
+}
+
+.div-item{
+    border: 1px solid black;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    font-size: 7rem;
 }
