@@ -1,3 +1,4 @@
+import { botones1 } from "./components/header/header.js";
 import { cargarCartas } from "./components/tablero/tablero.js";
 
 cargarCartas();
@@ -9,6 +10,8 @@ contenedor.className="contenedor";
 let header= document.createElement("div");
 contenedor.appendChild(header);
 header.className="header"
+botones1(header)
+
 
 let footer = document.createElement("div");
 contenedor.appendChild(footer);

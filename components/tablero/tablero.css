@@ -1,9 +1,6 @@
-.tablero{
-    background-color: blue;
-}
 
 .div-tablero{
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
 
     display: grid;
     grid-template-columns: repeat(8,8rem);
@@ -13,11 +10,12 @@
 }
 
 .div-item{
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow:5px 5px rgb(163, 162, 162);
 
     
     font-size: 7rem;
