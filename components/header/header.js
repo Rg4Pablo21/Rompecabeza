@@ -18,6 +18,7 @@ function botones1(boton2) {
         botones.appendChild(btn);
     }
     boton2.appendChild(botones);
+
 }
 
 export { botones1 };

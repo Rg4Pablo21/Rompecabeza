@@ -1,5 +1,9 @@
-
-
+.botones{
+   
+    display: grid;
+    grid-template-columns: repeat(29,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
 
 .btn-0 {
     width: 10rem;
