@@ -1,33 +1,37 @@
-import { botones1 } from "./components/header/header.js";
 import { cargarCartas } from "./components/tablero/tablero.js";
-
-cargarCartas();
 let DOM = document.querySelector("#root");
 
-let contenedor = document.createElement("div");
-contenedor.className="contenedor";
 
-let header= document.createElement("div");
-contenedor.appendChild(header);
-header.className="header"
-botones1(header)
-
+let contenedor = document.createElement('div');
 
 let footer = document.createElement("div");
 contenedor.appendChild(footer);
-footer.className="footer"
+footer.className = "div-footer"
+
+let progreso = document.createElement("div");
+contenedor.appendChild(progreso);
+progreso.className = "div-progreso";
 
 let tablero = document.createElement("div");
 contenedor.appendChild(tablero);
-tablero.className="tablero";
+tablero.className = "div-tablero";
 tablero.appendChild(cargarCartas());
 
 
-let progreso =document.createElement("div");
-contenedor.appendChild(progreso);
-progreso.className="progreso"
 
-
-
+let header = document.createElement("div");
+contenedor.appendChild(header);
+header.className = "div-header";
 
 DOM.appendChild(contenedor);
+contenedor.className = "div-contenedor";
+
+
+let todasLasCartasDelDOM = document.querySelectorAll('.carta')
+todasLasCartasDelDOM.forEach(cadaCarta => {
+cadaCarta.addEventListener("click", ()=>{
+    cadaCarta.classList.add("marcado");
+})
+})
+
+

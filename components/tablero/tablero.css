@@ -1,22 +1,41 @@
-
-.div-tablero{
-    background-color: rgb(255, 255, 255);
-
+.div-tablero {
+    background-color: beige;
     display: grid;
-    grid-template-columns: repeat(8,8rem);
-    grid-template-rows: repeat(8,8rem);
+    grid-template-columns: repeat(7, 7rem);
+    grid-template-rows: repeat(2, 10rem);
     gap: 1rem;
-    padding: 10rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
-.div-item{
-    border: 3px solid black;
-    border-radius: 3px;
+.carta {
+    height: 8rem;
+    width: 7rem;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: white;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow:5px 5px rgb(163, 162, 162);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 
-    
-    font-size: 7rem;
+    cursor: pointer;
 }
+
+.carta:hover {
+    border: 5px solid rgb(221, 23, 23);
+    transition: 0.1s;
+    background-color: paleturquoise;
+
+}
+.marcado{
+    background-color: red;
+    
+}
+
+
