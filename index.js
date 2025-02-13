@@ -1,37 +1,38 @@
 import { cargarCartas } from "./components/tablero/tablero.js";
+import { header } from "./components/header/header.js"; // 🔹 Importar el header
+
 let DOM = document.querySelector("#root");
 
-
 let contenedor = document.createElement('div');
-
-let footer = document.createElement("div");
-contenedor.appendChild(footer);
-footer.className = "div-footer"
-
-let progreso = document.createElement("div");
-contenedor.appendChild(progreso);
-progreso.className = "div-progreso";
-
-let tablero = document.createElement("div");
-contenedor.appendChild(tablero);
-tablero.className = "div-tablero";
-tablero.appendChild(cargarCartas());
-
-
-
-let header = document.createElement("div");
-contenedor.appendChild(header);
-header.className = "div-header";
-
-DOM.appendChild(contenedor);
 contenedor.className = "div-contenedor";
 
+// Agregar el header correctamente
+let headerElement = header(); // Llamar la función
+contenedor.appendChild(headerElement);
 
-let todasLasCartasDelDOM = document.querySelectorAll('.carta')
+// Footer
+let footer = document.createElement("div");
+footer.className = "div-footer";
+contenedor.appendChild(footer);
+
+// Progreso
+let progreso = document.createElement("div");
+progreso.className = "div-progreso";
+contenedor.appendChild(progreso);
+
+// Tablero de cartas
+let tablero = document.createElement("div");
+tablero.className = "div-tablero";
+tablero.appendChild(cargarCartas());
+contenedor.appendChild(tablero);
+
+// Agregar el contenedor al DOM
+DOM.appendChild(contenedor);
+
+// Evento para marcar cartas
+let todasLasCartasDelDOM = document.querySelectorAll('.carta');
 todasLasCartasDelDOM.forEach(cadaCarta => {
-cadaCarta.addEventListener("click", ()=>{
-    cadaCarta.classList.add("marcado");
-})
-})
-
-
+    cadaCarta.addEventListener("click", () => {
+        cadaCarta.classList.add("marcado");
+    });
+});
